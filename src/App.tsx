@@ -60,11 +60,11 @@ function App() {
             <div className="absolute -bottom-3 left-8 w-5 h-5 bg-orange-400 rounded-full border-2 border-orange-600 animate-bounce delay-1000"></div>
             
             <h1 className="text-4xl md:text-6xl font-bold text-yellow-600 mb-4 transform -skew-x-2" 
-                style={{ fontFamily: 'Comic Sans MS, cursive, sans-serif', textShadow: '3px 3px 0px rgba(255, 193, 7, 0.3)' }}>
+                style={{ fontFamily: 'Fredoka, Comic Neue, Fredoka, Comic Neue, Comic Sans MS, cursive, sans-serif', textShadow: '3px 3px 0px rgba(255, 193, 7, 0.3)' }}>
               I'm Sorry, My Love! 💛
             </h1>
             <p className="text-xl text-amber-700 font-medium transform skew-x-1" 
-               style={{ fontFamily: 'Comic Sans MS, cursive, sans-serif' }}>
+               style={{ fontFamily: 'Fredoka, Comic Neue, Fredoka, Comic Neue, Comic Sans MS, cursive, sans-serif' }}>
               Your sleepy man needs forgiveness... 🥺
             </p>
             
@@ -95,11 +95,11 @@ function App() {
               />
               <div className="bg-yellow-100 border-3 border-yellow-400 rounded-2xl p-6 transform -skew-x-1">
                 <h2 className="text-4xl font-bold text-yellow-700 mb-4" 
-                    style={{ fontFamily: 'Comic Sans MS, cursive, sans-serif', textShadow: '2px 2px 0px rgba(255, 235, 59, 0.5)' }}>
+                    style={{ fontFamily: 'Fredoka, Comic Neue, Fredoka, Comic Neue, Comic Sans MS, cursive, sans-serif', textShadow: '2px 2px 0px rgba(255, 235, 59, 0.5)' }}>
                   I Fell Asleep Again... 😴
                 </h2>
                 <p className="text-xl text-yellow-800 leading-relaxed max-w-2xl mx-auto font-medium" 
-                   style={{ fontFamily: 'Comic Sans MS, cursive, sans-serif' }}>
+                   style={{ fontFamily: 'Fredoka, Comic Neue, Fredoka, Comic Neue, Comic Sans MS, cursive, sans-serif' }}>
                   I know I've done this before, and I'm truly sorry! I love our calls so much that I want to stay awake forever just to talk to you, but my sleepy brain has other plans! 
                 </p>
                 <div className="mt-4 text-3xl animate-bounce">🥺 Please forgive me? 🥺</div>
@@ -122,11 +122,11 @@ function App() {
               />
               <div className="bg-gradient-to-r from-yellow-100 to-amber-100 border-3 border-amber-400 rounded-xl p-6 transform skew-x-1">
                 <p className="text-2xl font-bold text-amber-800 mb-2" 
-                   style={{ fontFamily: 'Comic Sans MS, cursive, sans-serif' }}>
+                   style={{ fontFamily: 'Fredoka, Comic Neue, Comic Sans MS, cursive, sans-serif' }}>
                   I'm begging you... 🙏
                 </p>
                 <p className="text-lg text-amber-700" 
-                   style={{ fontFamily: 'Comic Sans MS, cursive, sans-serif' }}>
+                   style={{ fontFamily: 'Fredoka, Comic Neue, Comic Sans MS, cursive, sans-serif' }}>
                   Please give me another chance? 💛
                 </p>
               </div>
@@ -152,7 +152,7 @@ function App() {
             <div className="relative z-10 ml-12">
               <div className="text-center mb-6">
                 <h3 className="text-4xl font-bold text-yellow-700 mb-4 transform -skew-x-1" 
-                    style={{ fontFamily: 'Comic Sans MS, cursive, sans-serif', textShadow: '2px 2px 0px rgba(255, 235, 59, 0.3)' }}>
+                    style={{ fontFamily: 'Fredoka, Comic Neue, Comic Sans MS, cursive, sans-serif', textShadow: '2px 2px 0px rgba(255, 235, 59, 0.3)' }}>
                   My Sacred Promise to You 💛
                 </h3>
               </div>
@@ -168,31 +168,31 @@ function App() {
                 <div className="text-center md:text-left">
                   <div className="bg-gradient-to-br from-yellow-400 via-amber-400 to-orange-500 text-white p-8 rounded-3xl shadow-2xl border-4 border-white/30 transform -rotate-2">
                     <h4 className="text-2xl font-bold mb-6 text-center" 
-                        style={{ fontFamily: 'Comic Sans MS, cursive, sans-serif' }}>
+                        style={{ fontFamily: 'Fredoka, Comic Neue, Comic Sans MS, cursive, sans-serif' }}>
                       I Solemnly Promise I Will:
                     </h4>
                     <ul className="space-y-4 text-left">
                       <li className="flex items-center gap-2">
                         <span className="text-2xl">💛</span>
-                        <span className="text-lg" style={{ fontFamily: 'Comic Sans MS, cursive, sans-serif' }}>
+                        <span className="text-lg" style={{ fontFamily: 'Fredoka, Comic Neue, Comic Sans MS, cursive, sans-serif' }}>
                           Tell you when I'm getting sleepy
                         </span>
                       </li>
                       <li className="flex items-center gap-2">
                         <span className="text-2xl">🧡</span>
-                        <span className="text-lg" style={{ fontFamily: 'Comic Sans MS, cursive, sans-serif' }}>
+                        <span className="text-lg" style={{ fontFamily: 'Fredoka, Comic Neue, Comic Sans MS, cursive, sans-serif' }}>
                           Not fight sleep when I'm exhausted
                         </span>
                       </li>
                       <li className="flex items-center gap-2">
                         <span className="text-2xl">💛</span>
-                        <span className="text-lg" style={{ fontFamily: 'Comic Sans MS, cursive, sans-serif' }}>
+                        <span className="text-lg" style={{ fontFamily: 'Fredoka, Comic Neue, Comic Sans MS, cursive, sans-serif' }}>
                           Trust you to let me rest when needed
                         </span>
                       </li>
                       <li className="flex items-center gap-2">
                         <span className="text-2xl">🧡</span>
-                        <span className="text-lg" style={{ fontFamily: 'Comic Sans MS, cursive, sans-serif' }}>
+                        <span className="text-lg" style={{ fontFamily: 'Fredoka, Comic Neue, Comic Sans MS, cursive, sans-serif' }}>
                           Communicate better about my energy levels
                         </span>
                       </li>
@@ -215,18 +215,18 @@ function App() {
                 className="w-64 h-40 object-cover rounded-2xl mx-auto mb-8 shadow-xl border-4 border-yellow-500"
               />
               <h3 className="text-4xl font-bold mb-6 text-yellow-800 transform -skew-x-1" 
-                  style={{ fontFamily: 'Comic Sans MS, cursive, sans-serif', textShadow: '2px 2px 0px rgba(255, 193, 7, 0.3)' }}>
+                  style={{ fontFamily: 'Fredoka, Comic Neue, Comic Sans MS, cursive, sans-serif', textShadow: '2px 2px 0px rgba(255, 193, 7, 0.3)' }}>
                 The Truth Is...
               </h3>
               <p className="text-xl leading-relaxed max-w-2xl mx-auto mb-6 text-yellow-900" 
-                 style={{ fontFamily: 'Comic Sans MS, cursive, sans-serif' }}>
+                 style={{ fontFamily: 'Fredoka, Comic Neue, Comic Sans MS, cursive, sans-serif' }}>
                 I want to do <em>everything</em> with you - talk for hours, spend quality time together, 
                 AND fall asleep peacefully knowing you're there. You mean the world to me, and I promise 
                 to be better at communicating when I need rest. 
               </p>
               <div className="bg-yellow-300 border-3 border-yellow-500 rounded-2xl p-4 inline-block transform -rotate-1">
                 <span className="text-3xl font-bold text-yellow-800" 
-                      style={{ fontFamily: 'Comic Sans MS, cursive, sans-serif' }}>
+                      style={{ fontFamily: 'Fredoka, Comic Neue, Comic Sans MS, cursive, sans-serif' }}>
                   💛 I'm crazy about you 💛
                 </span>
               </div>
@@ -249,11 +249,11 @@ function App() {
               />
               <div className="bg-gradient-to-r from-yellow-100 to-amber-100 border-3 border-yellow-400 rounded-xl p-6 transform skew-x-1">
                 <p className="text-2xl text-yellow-800 font-bold mb-2" 
-                   style={{ fontFamily: 'Comic Sans MS, cursive, sans-serif' }}>
+                   style={{ fontFamily: 'Fredoka, Comic Neue, Comic Sans MS, cursive, sans-serif' }}>
                   Please forgive your sleepy but loving man? 🥺
                 </p>
                 <p className="text-lg text-amber-700" 
-                   style={{ fontFamily: 'Comic Sans MS, cursive, sans-serif' }}>
+                   style={{ fontFamily: 'Fredoka, Comic Neue, Comic Sans MS, cursive, sans-serif' }}>
                   I promise to be better! 💛
                 </p>
               </div>
@@ -275,7 +275,7 @@ function App() {
       <div className="fixed bottom-4 right-4 md:right-8 z-50">
         <div className="bg-yellow-200/90 backdrop-blur-sm border-2 border-yellow-400 rounded-2xl px-4 py-2 md:px-6 md:py-3 transform rotate-2 shadow-lg">
           <p className="text-yellow-800 font-bold text-sm md:text-lg" 
-             style={{ fontFamily: 'Comic Sans MS, cursive, sans-serif' }}>
+             style={{ fontFamily: 'Fredoka, Comic Neue, Comic Sans MS, cursive, sans-serif' }}>
             - Emilio 💛
           </p>
         </div>
