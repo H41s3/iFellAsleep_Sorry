@@ -1,94 +1,172 @@
-## Project Commands Cheat Sheet (because Future-You deserves nice things)
+## Universal Commands Cheat Sheet (because Future-You deserves nice things)
 
-A quick, no-BS list of the commands we used in this project, with what they do, when to use them, and why they saved your day.
+A quick, no-BS list of commands you’ll reuse across projects. What they do, when to use them, and why they save your sanity.
 
-### Git: Save, Explain, Yeet to GitHub
+### Git Essentials: Save, branch, and ship
 
-- Commit staged changes (a.k.a. “save point with message”):
-```bash
-git commit -m "Your helpful message here"
-```
-When: After you `git add` and you want a snapshot with a meaningful message. Why: So Future-You knows what Past-You did and why.
-
-- Stage changes (tell Git what to include in the next commit):
+- Stage changes (tell Git what to include next):
 ```bash
 git add .
 ```
-When: Before committing, to include all modified/new files. Why: Git doesn’t read minds (yet).
+When: Before committing. Why: Git doesn’t auto-guess what you meant.
 
-- Push your commits to GitHub (send it to the cloud gods):
+- Commit staged changes (save point with message):
 ```bash
-git push origin main
+git commit -m "Describe the why, not just the what"
 ```
-When: After committing, to update the `main` branch on GitHub. Why: So Netlify (and other humans) can see your latest brilliance.
+When: After staging. Why: So Future-You understands Past-You’s choices.
 
-- Check which remote repo you’re talking to (trust but verify):
+- Push to a remote branch (share with the world):
+```bash
+git push origin main   # or: git push -u origin my-feature
+```
+When: After committing. Why: CI/CD, teammates, and deployments depend on it.
+
+- Pull latest changes (bring updates down):
+```bash
+git pull
+```
+When: Before you start work or before pushing. Why: Avoids avoidable conflicts.
+
+- Create/switch branches (parallel universes for code):
+```bash
+git switch -c my-feature   # create + switch
+git switch main            # switch existing
+```
+When: New feature/bugfix. Why: Keeps main clean and your work scoped.
+
+- See what’s going on (your situational awareness):
+```bash
+git status
+git log --oneline --graph --decorate --all
+```
+When: Often. Why: Know what’s staged, what changed, and where you are.
+
+- Compare changes (before you commit or push):
+```bash
+git diff            # unstaged vs working tree
+git diff --staged   # staged vs last commit
+```
+
+- Undo with style (because mistakes happen):
+```bash
+git restore --staged <file>   # unstage
+git restore <file>            # discard local changes
+git revert <commit>           # make a new commit that undoes that commit
+git stash push -m "WIP"       # shelf messy changes
+git stash apply               # bring them back
+```
+
+- Remotes (trust but verify):
 ```bash
 git remote -v
 ```
-When: If you’re not 100% sure which GitHub repo your pushes are going to. Why: Prevents “why is nothing updating?” meltdowns.
+When: If pushes aren’t going where you think. Why: Debugs “why isn’t it updating?”
 
-Optional but handy:
+### Node & Package Scripts (JavaScript projects)
 
-- See what’s changed (peek before you commit):
+- Install dependencies:
 ```bash
-git status
+npm ci         # clean, reproducible (CI or fresh clones)
+npm install    # normal install (local dev)
 ```
-When: Frequently. Why: It tells you what’s staged, what’s not, and what Git is ignoring.
 
-### Files & Folders: Put things where they belong
+- Run project scripts (define in package.json):
+```bash
+npm run dev       # start dev server
+npm run build     # build for production
+npm run preview   # preview production build locally
+```
 
-- Create the `public` folder (like a front door for static files):
+### Static Assets and Public Files (framework-agnostic idea)
+
+- Public folder is where files are served as-is. Typical names: `public/`, `static/`, or a CDN bucket.
 ```bash
 mkdir -p public
 ```
-When: When you need a place for static assets (e.g., social preview images). Why: Build tools (like Vite/Netlify) serve files from here as-is.
+When: You need images, robots.txt, favicon, or social preview assets available at a public URL.
 
-### Social Media Preview: Make links look pretty
+### Social Media Previews (Open Graph + Twitter)
 
-We wired your `index.html` to use a local image for Open Graph and Twitter cards:
+Add these to your HTML head (values are placeholders):
 ```html
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Your Page Title" />
+<meta property="og:description" content="One-liner that actually helps" />
 <meta property="og:image" content="/social-preview.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Your Page Title" />
+<meta name="twitter:description" content="Same helpful one-liner" />
 <meta name="twitter:image" content="/social-preview.jpg" />
 ```
-When: Always, if you want a preview image on Facebook, Twitter, WhatsApp, Discord, etc. Why: Because plain links are sad.
+Tips:
+- Image size: 1200×630 px. Format: JPG/PNG. Keep it under ~2MB.
+- Host locally (e.g., `/public/social-preview.jpg`) or on a reliable CDN.
+- Use platform debuggers to refresh cache after changes.
+  - Facebook Sharing Debugger, Twitter Card Validator, etc.
 
-What you do: Drop `social-preview.jpg` (1200x630) into the `public/` folder. That’s it.
+### Fonts (consistent across devices)
 
-### Fonts: Make it cute, consistently
+- Prefer hosted web fonts (Google Fonts, Adobe, self-hosted) with fallbacks:
+```css
+body { font-family: "YourWebFont", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
+```
+Why: System-only fonts vary by device; web fonts keep the look consistent.
 
-We switched to reliable web fonts and proper fallbacks in `index.html` and `App.tsx`.
-Why: System fonts like Comic Sans MS don’t exist on many phones (tragic, I know). Web fonts fix inconsistent mobile rendering.
+### Deploys (Netlify / Vercel / GitHub Pages — same vibes)
 
-### Netlify: “Did it deploy yet?”
+- CI auto-deploy flow (most common):
+1) Push to your main branch → CI builds → platform deploys.
+2) Configure once: build command (e.g., `npm run build`) and output dir (`dist`, `build`, etc.).
 
-If your site is connected to GitHub with auto-deploy, pushing to `main` triggers a new build automatically.
+- Manual sanity checks locally:
+```bash
+npm run build
+npm run preview   # or serve ./dist with any static server
+```
 
-Checklist (no terminal needed):
-- Push to `main` → Netlify builds → Deploys → You refresh the site → Bask in glory.
-- If not set up, in Netlify: New site from Git → Pick repo → Build command: `npm run build` → Publish directory: `dist`.
+### Troubleshooting Quickies
 
-### Common Mini-Workflows (a.k.a. muscle memory)
+- Fix weird dependency issues:
+```bash
+rm -rf node_modules package-lock.json && npm ci
+```
+
+- “Something is already running on port 5173” (adjust port as needed):
+```bash
+lsof -i :5173 | cat   # macOS/Linux – list process using the port
+kill -9 <PID>         # send it to the farm upstate
+```
+
+- Environment variables (don’t leak your secrets):
+```bash
+# .env, .env.local, etc. – loaded by most frameworks
+API_KEY=shh-no
+```
+
+### Mini-Workflows (muscle memory)
 
 1) Change files → stage → commit → push
 ```bash
 git add .
-git commit -m "Explain what you changed like a responsible adult"
+git commit -m "Explain what changed and why"
 git push origin main
 ```
 
-2) Add or update social preview image
+2) Start a feature safely
+```bash
+git switch -c feature/cool-thing
+# ...hack hack hack...
+git add . && git commit -m "Implement cool thing"
+git push -u origin feature/cool-thing
+```
+
+3) Add or update social preview
 ```bash
 mkdir -p public
-# copy your 1200x630 image into public as social-preview.jpg
-# (no command shown because you’ll likely drag-and-drop)
+# copy your 1200x630 image to public as social-preview.jpg
 ```
 
-3) Sanity check your remote (when pushes don’t show up)
-```bash
-git remote -v
-```
-
-That’s it. Short, sharp, and you won’t hate yourself later.
+Short, sharp, and reusable across almost any web project.
 
 
